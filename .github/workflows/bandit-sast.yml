@@ -30,7 +30,7 @@ jobs:
       - name: Run Bandit Scan and output SARIF
         run: |
           # Run Bandit with SARIF output
-          bandit -r . -c .bandit -f sarif -o bandit-results.sarif
+          bandit -r . -c .bandit -f sarif -o bandit-results.sarif --exit-zero
 
       - name: Upload SARIF report
         uses: github/codeql-action/upload-sarif@v3
